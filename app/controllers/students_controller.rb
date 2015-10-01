@@ -1,6 +1,6 @@
 class StudentsController < ApplicationController
 	
-	before_action: get_student, only:[:show,:edit,:update,:destroy] 
+	before_action :get_student, only: [:show,:edit,:update,:destroy] 
 
 	def get_student
 		@student = Student.find(params[:id])
