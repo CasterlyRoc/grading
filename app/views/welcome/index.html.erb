@@ -1,16 +1,16 @@
 <h1><center>Main Page</center></h1>
 
-<h3><%= link_to 'Instructors', controller: 'instructors' %><br><br></h3>
+<h2><%= link_to 'Instructors', controller: 'instructors' %><br><br></h3>
 <% @instructors.each do |instructor| %>
 <p><%= instructor.name%><p>
 <% end %>
 
-<h3><%= link_to 'Students', controller: 'students' %><br><br></h3>
+<h2><%= link_to 'Students', controller: 'students' %><br><br></h3>
 <% @students.each do |student| %>
 <p><%= student.name %></p>
 <% end %>
 
-<h3><%= link_to 'Courses', controller: 'courses' %></h3>
+<h2><%= link_to 'Courses', controller: 'courses' %></h3>
 <% @courses.each do |course| %>
 <p><%= course.name %></p>
 <% end %>
