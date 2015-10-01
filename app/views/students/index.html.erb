@@ -1,1 +1,22 @@
-Use app/views/instructors/index.html.erb as a template to create a similar page for students.
+<h1>Listing Students</h1>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th colspan="2"></th>
+  </tr>
+ 
+  <% @students.each do |student| %>
+    <tr>
+      <td><%= student.name %></td>
+      <td><%= student.address %></td>
+      <td><%= link_to 'Show', student_path(student_path) %></td>
+      <td><%= link_to 'Edit', edit_student_path(student) %></td>
+      <td><%= link_to 'Destroy', student_path(student),
+                    method: :delete,
+		    data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
+<br>
+<%= link_to 'Create new student', new_student_path %> <br>
