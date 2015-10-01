@@ -1,4 +1,7 @@
-<h1>Hello, Rails!</h1>
+<h1>Main Page</h1>
 <%= link_to 'Instructors', controller: 'instructors' %><br><br>
+<% @instructors.each do |instructor| %>
+<h2><%= instructor.name%></h2>
+<% end %>
 <%= link_to 'Students', controller: 'students' %><br><br>
 <%= link_to 'Courses', controller: 'courses' %>
