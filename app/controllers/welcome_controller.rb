@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
   def index
-  	@instructors = Instructors.all
+  	@instructors = Instructor.all
   end
 end
