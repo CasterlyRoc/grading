@@ -2,7 +2,7 @@
 
 <h2><%= link_to 'Instructors', controller: 'instructors' %><br><br></h3>
 <% @instructors.each do |instructor| %>
-<p><%= instructor.name%><p>
+<p><%= link_to instructor.name, instructor_path(instructor)%><p>
 <% end %>
 
 <h2><%= link_to 'Students', controller: 'students' %><br><br></h3>
