@@ -2,12 +2,12 @@
 
 <h2><%= link_to 'Instructors', controller: 'instructors' %><br><br></h3>
 <% @instructors.each do |instructor| %>
-<p><%= link_to instructor.name, instructor_path(instructor)%><p>
+<h6><%= link_to instructor.name, instructor_path(instructor)%></h6>
 <% end %>
 
 <h2><%= link_to 'Students', controller: 'students' %><br><br></h3>
 <% @students.each do |student| %>
-<p><%= student.name %></p>
+<h6><%= link_to student.name, student_path(student) %></h6>
 <% end %>
 
 <h2><%= link_to 'Courses', controller: 'courses' %></h3>
