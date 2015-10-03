@@ -13,11 +13,6 @@
 <%= @instructor.webpage %>
 </p>
 
-<p><strong>Courses:</strong></p>
-<% @instructor.courses.each do |course| %>
-  <p>course.title</p>
-<% end %>
-
 A link to creating an assignment should also appear here. <br><br>
 
 <%= link_to 'Edit', edit_instructor_path(@instructor) %> |

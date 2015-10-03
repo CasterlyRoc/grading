@@ -23,9 +23,13 @@ class CoursesController < ApplicationController
   end
 
   def create
-    @instructor = Instructor.find(params[:instructor_id])
-    @course = @instructor.courses.create(course_params)
-    redirect_to instructor_path(@instructor)
+    @course = Course.new(course_params)
+
+    if @course.save
+      redirect_to @course
+    else
+      render 'new'
+    end
   end
 
   def update
