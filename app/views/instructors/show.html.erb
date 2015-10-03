@@ -13,7 +13,10 @@
 <%= @instructor.webpage %>
 </p>
 
-The information about assignments available for grading should appear here. <br><br>
+<p><strong>Courses:</strong></p>
+<% @instructor.courses.each do |course| %>
+  <p>course.title</p>
+<% end %>
 
 A link to creating an assignment should also appear here. <br><br>
 
