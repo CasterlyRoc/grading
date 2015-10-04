@@ -1,3 +1,3 @@
 class Question < ActiveRecord::Base
-  belongs_to :assignemt
+  belongs_to :assignment
 end
