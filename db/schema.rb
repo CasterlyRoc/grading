@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151004195205) do
+ActiveRecord::Schema.define(version: 20151004223513) do
 
   create_table "assignments", force: :cascade do |t|
     t.string   "due_date"
@@ -39,13 +39,8 @@ ActiveRecord::Schema.define(version: 20151004195205) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "questions", force: :cascade do |t|
-    t.string   "question"
-    t.string   "answer"
-    t.integer  "point_value"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
+# Could not dump table "questions" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
 
   create_table "students", force: :cascade do |t|
     t.string   "name"
