@@ -12,3 +12,39 @@
   <strong>Total Points:</strong>
   <%= @assignment.tot_points %>
 </p>
+
+<p><strong>Questions:</strong></p>
+<% @assignment.questions.each do |question| %>
+  <p>
+    <strong>Question:</strong>
+    <%= question.question %>
+  </p>
+
+  <p>
+    <strong>Point Value:</strong>
+    <%= question.point_value %>
+  </p>
+
+  <p>
+    <strong>Answer:</strong>
+    <%= question.answer %>
+  </p>
+<% end %>
+<h2>Add a question:</h2>
+<%= form_for([@assignment, @assignment.questions.build]) do |f| %>
+  <p>
+    <%= f.label :question %><br>
+    <%= f.text_field :question %>
+  </p>
+  <p>
+    <%= f.label :point_value %><br>
+    <%= f.number_field :point_value %>
+  </p>
+  <p>
+    <%= f.label :answer %><br>
+    <%= f.text_field :answer %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
