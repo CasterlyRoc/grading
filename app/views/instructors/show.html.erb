@@ -13,14 +13,14 @@
 <%= @instructor.webpage %>
 </p>
 
-<p>Courses:</p>
+<p><strong>Courses:</strong></p>
 <% @courses.each do |course| %>
   <p>
     <%= course.title %>
   </p>
 <% end %>
 
-A link to creating an assignment should also appear here. <br><br>
+<br><%= link_to 'Create New Assignment', new_assignment_path %><br>
 
 <%= link_to 'Edit', edit_instructor_path(@instructor) %> |
 <%= link_to 'Back', instructors_path %>
