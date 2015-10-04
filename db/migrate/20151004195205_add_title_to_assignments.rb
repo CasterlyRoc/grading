@@ -1,5 +1,5 @@
-class AddTitleToAssignments < ActiveRecord::Migration
+class AddtitleToAssignments < ActiveRecord::Migration
   def change
-    add_column :assignments, :Title, :string
+    add_column :assignments, :title, :string
   end
 end

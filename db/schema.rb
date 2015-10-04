@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20151004195205) do
     t.integer  "tot_points"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string   "Title"
+    t.string   "title"
   end
 
   create_table "courses", force: :cascade do |t|
