@@ -39,9 +39,6 @@ ActiveRecord::Schema.define(version: 20151004223513) do
     t.datetime "updated_at", null: false
   end
 
-# Could not dump table "questions" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
-
   create_table "students", force: :cascade do |t|
     t.string   "name"
     t.text     "address"

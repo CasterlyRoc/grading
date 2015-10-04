@@ -5,7 +5,6 @@ class AssignmentsController < ApplicationController
 
   def show
     @assignment = Assignment.find(params[:id])
-    @questions = @assignment.questions
   end
 
   def edit
