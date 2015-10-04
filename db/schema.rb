@@ -43,12 +43,9 @@ ActiveRecord::Schema.define(version: 20151004195205) do
     t.string   "question"
     t.string   "answer"
     t.integer  "point_value"
-    t.integer  "assignment_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
-
-  add_index "questions", ["assignment_id"], name: "index_questions_on_assignment_id"
 
   create_table "students", force: :cascade do |t|
     t.string   "name"
