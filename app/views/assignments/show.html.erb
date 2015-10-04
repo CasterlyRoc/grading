@@ -31,7 +31,7 @@
   </p>
 <% end %>
 <h2>Add a question:</h2>
-<%= form_for([@assignment, @assignment.questions.build]) do |f| %>
+<%= form_for([@assignment, @questions.build]) do |f| %>
   <p>
     <%= f.label :question %><br>
     <%= f.text_field :question %>
