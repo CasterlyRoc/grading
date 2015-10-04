@@ -14,20 +14,20 @@
 </p>
 
 <p><strong>Questions:</strong></p>
-<% @assignment.questions.each do |question| %>
+<% @assignment.questions.each do |q| %>
   <p>
     <strong>Question:</strong>
-    <%= question.question %>
+    <%= q.question %>
   </p>
 
   <p>
     <strong>Point Value:</strong>
-    <%= question.point_value %>
+    <%= q.point_value %>
   </p>
 
   <p>
     <strong>Answer:</strong>
-    <%= question.answer %>
+    <%= q.answer %>
   </p>
 <% end %>
 <h2>Add a question:</h2>
